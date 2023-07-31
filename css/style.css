@@ -104,13 +104,11 @@ span{
     align-items: center;
     justify-content: space-between;
     height: auto;
-    border:solid 1px white
 }
 .imgMenu>div {
     background-color: var(--bgCard);
     width: 60%;
     color: black;
-    border:solid 1px blue;
 }
 
 .food1 {
@@ -118,7 +116,94 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin:10px 0px;
 }
-.imgMenu div div img{
-    width: 100%;
+.food1 img{
+    width: 60%;
+}
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services h2{
+    text-align: center;
+    width: 50%;
+}
+.imgsSe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imgS{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:10px 0px;
+}
+.imgS img{
+    width: 40%;
+}
+.imgS p{
+    width: 65%;
+    text-align: center;
+}
+.Ccuadro{
+    display: flex;
+    justify-content:center;
+}
+.cuadro{
+    padding: 20px;
+    border-style: double;
+    border-color: 5px var(--bgCard);
+    background-color: var(--bgCard);
+    width: 80%;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cuadro h2{
+    text-align: center;
+    font-size: 26px;
+}
+.cuadro span{
+    background-color: #ff702a;
+    color:white;
+    padding: 5px;
+}
+
+footer{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.foote{
+    width: 70%;
+}
+.menuL{
+    margin:0px 0px 20px 0px;
+}
+.our{
+    margin:0px 0px 20px 0px;
+}
+.infor{
+    margin:0px 0px 20px 0px;
+
+}
+hr{
+    width: 15%;
+    border:solid 1px var(--orange);
+}
+.foote p{ 
+    margin-bottom: 0;
+}
+.contact div{
+    border:solid 1px white;
+}
+.contact span{
+    border-radius: 50%;
+    background-color: var(--orange);
 }
