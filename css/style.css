@@ -12,6 +12,12 @@ body{
 .bg{
     --bs-navbar-padding-y:0.3rem;
 }
+.navbar-brand{
+    cursor: default;
+}
+.navbar-brand:hover{
+    color:var(--orange);
+}
 .container-fluid{
     --bs-gutter-x:10px;
 }
@@ -48,6 +54,7 @@ body{
     text-align: center;
     color:white;
 }
+
 .headT>span{
     background-color: var(--orange);
     color: white;
@@ -58,10 +65,13 @@ body{
     text-align: center;
 }
 .ima img{
-    width: 90%;
+    width: 80%;
 }
 span{
-    color:var(--orange)
+    color:var(--orange);
+    font-size: 20px;
+    
+    text-align: center;
 }
 .about {
     width: 100%;
@@ -87,11 +97,10 @@ span{
 }
 
 #aboutI img{
-    width: 90%;
+    width: 75%;
 }
 .menu{
     text-align: center;
-    
 }
 .foodmenu{
     display: flex;
@@ -106,15 +115,17 @@ span{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: auto;
+    margin-bottom: 40px;
 }
-.imgMenu>div {
+.imgMenu>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.food1 {
     background-color: var(--bgCard);
     width: 60%;
     color: black;
-}
-
-.food1 {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -128,6 +139,7 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 40px;    
 }
 .services h2{
     text-align: center;
@@ -160,7 +172,7 @@ span{
     border-style: double;
     border-color: 5px var(--bgCard);
     background-color: var(--bgCard);
-    width: 80%;
+    width: 85%;
     color:black;
     display: flex;
     flex-direction: column;
@@ -168,7 +180,6 @@ span{
 }
 .cuadro h2{
     text-align: center;
-    font-size: 26px;
 }
 .cuadro span{
     background-color: #ff702a;
@@ -176,7 +187,7 @@ span{
     padding: 5px;
 }
 
-footer{
+footer>div{
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -196,7 +207,7 @@ footer{
 }
 
 hr{
-    width: 25%;
+    width: 50px;
     border:solid 1px var(--orange);
 }
 .foote p{ 
@@ -267,8 +278,10 @@ hr{
     }
     .ab{
         width: 100%;
+        height: 70vh;
         display: flex;
         justify-content: center;
+        margin-bottom: 40px;
     }
     .about {
         display: flex;
@@ -277,12 +290,18 @@ hr{
         justify-content: space-between;
         width: 70%;
     }
-    
+    #aboutI{
+        text-align: left;
+        width: 55%;
+    }
+    #aboutI img {
+        width: 60%;
+    }
     #aboutUs{
         margin: 15px 0px;
         display: flex;
         align-items: baseline;
-        width: 40%;
+        width: 45%;
         text-align:left;
     }
 
@@ -291,8 +310,9 @@ hr{
     }
 
     #aboutUs p{
+        width: 328px;
         text-align: left;
-        font-size: 20px;
+        font-size: 18px;
     }
     
     #aboutUs span:last-child{
@@ -300,5 +320,64 @@ hr{
         background-color: var(--orange);
         padding: 5px;
     }
+    .imgMenu{
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    .imgMenu>div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+    }
+    .food1{
+        width: 200px;
+        justify-content: space-evenly;
+    }   
+    .imgsSe{
+        flex-direction: row;
+    }
+    footer{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    footer>div{
+        flex-direction: row;
+        width: 70%;
+        justify-content: space-between;
+    }
+    .foote{
+        display: flex;
+        justify-content: space-between;
+    }
+    .contact{
+        width: 250px;
+    }
     
+    .Ccuadro{
+        display: flex;
+        align-items: center;
+    }   
+    .cuadro h2{
+        font-size:40px;
+        margin-bottom: 20px;
+    }
+    .titleS{
+        height: 70vh;
+    }
+}
+
+@media (min-width: 768px){
+    .ima img {
+        width: 70%;
+    }
+    #aboutI img {
+        width: 55%;
+    }
+    .food1{
+        width: 195px;
+    }
 }
