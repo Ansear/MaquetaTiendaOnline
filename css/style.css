@@ -1,37 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: cascadia;
+    src: url(../fonts/Cascadia.ttf);
+}
 :root{
     --orange:#ff702a;
     --bgCard:#ffefe8;
+    --navM:#2c2b47;
+    --bg:#1e1d2b;
 }
 
 body{
-    background-color:#1e1d2b;
+    background-color:var(--bg);
     font-family: 'Poppins';
-    color:white
-}
-.bg{
-    --bs-navbar-padding-y:0.3rem;
-}
-.navbar-brand{
-    cursor: default;
-}
-.navbar-brand:hover{
-    color:var(--orange);
-}
-.container-fluid{
-    --bs-gutter-x:10px;
-}
-.navbar-brand{
-    color:var(--orange);
-}
-.navbar-toggler {
-    padding: 0px;
+    color:white;
+    font-family: cascadia;
 }
 
 @media (max-width:990px)  {
-    .cola{
-        background-color: #2c2b47;
+    .navD{
+        background-color: var(--bg);
     }
+    
+}
+
+.navCont{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: repeat(5, 1fr);
+}
+.navT{
+    color:var(--orange);
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+.navD{
+    background-color: var(--navM);
+    text-align: center;
+    grid-column: 1/4;
+    grid-row: 2/6;
+}
+.navL{
+    list-style: none;
+    padding-left: 0;
+}
+a{
+    color:white;
+    text-decoration: none;
 }
 .titleS{
     width: 100%;
@@ -48,7 +63,7 @@ body{
 }
 .headT>h1{
     color:var(--orange);
-    font-size: 45px;
+    font-size: 38px;
 }
 .headT>p{
     text-align: center;
@@ -121,10 +136,12 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
-.food1 {
+.food1{
     background-color: var(--bgCard);
-    width: 60%;
+    border-radius: 10px;
+    width: 90%;
     color: black;
     text-align: center;
     display: flex;
@@ -239,7 +256,9 @@ hr{
     border-radius: 50%;
     background-color: var(--orange);
 }
-
+/* .food1{
+    width: 200px;
+} */
 @media (min-width:992px) {
     .titleF{
         width: 70%;
@@ -247,6 +266,30 @@ hr{
         justify-content: space-between;
         align-items: center;
     }
+    .navCont{
+        grid-template-rows: 1fr;
+        align-items: center;
+    }
+    .navT{
+        justify-items: center;
+        font-size: 30px;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .navD{
+        grid-row: 1/2;
+        grid-column: 2/4;
+        display:grid;
+        background-color: var(--bg);
+        place-items: flex-end;
+    }
+    .navL{
+        display: flex;
+        background-color: var(--bg);
+        justify-content: space-evenly;
+        width: 60%;
+    }
+    
     .headT{
         width: fit-content;
         align-items: start;
@@ -263,18 +306,6 @@ hr{
     }
     .ima{
         width: 50%;
-    }
-    .navbar-nav{
-        gap:20px;
-    }
-    .container-fluid{
-        --bs-gutter-x:100px;
-    }
-    .navbar-brand{
-        font-size:27px;
-    }
-    .nav-link{
-        font-size: 20px;
     }
     .ab{
         width: 100%;
@@ -330,10 +361,10 @@ hr{
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 60%;
+        width: 85%;
     }
     .food1{
-        width: 200px;
+        width: 280px;
         justify-content: space-evenly;
     }   
     .imgsSe{
@@ -365,12 +396,11 @@ hr{
         font-size:40px;
         margin-bottom: 20px;
     }
-    .titleS{
-        height: 70vh;
-    }
+    
+    
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) and (max-width: 992px) {
     .ima img {
         width: 70%;
     }
@@ -378,6 +408,20 @@ hr{
         width: 55%;
     }
     .food1{
-        width: 195px;
+        width: 250px;
+    }
+    .nav-link{
+        font-size: 20px;
+    }
+    .nav-item{
+        font-size: 20px;
+        padding: 10px;
+    }
+    .navT{
+        font-size: 25px;
+    }
+    .headT>h1{
+        color:var(--orange);
+        font-size: 45px;
     }
 }
